@@ -50,6 +50,15 @@ ping 203.0.113.9 source <local-bgp-source>
 traceroute 203.0.113.9 source <local-bgp-source>
 ```
 
+If the peer is in a VRF, use platform-specific VRF-scoped equivalents for every BGP, route, ping, traceroute, and logging check. Example placeholders:
+
+```text
+show bgp vrf <vrf> neighbors 203.0.113.9
+show ip route vrf <vrf> 203.0.113.9
+ping vrf <vrf> 203.0.113.9 source <local-bgp-source>
+traceroute vrf <vrf> 203.0.113.9 source <local-bgp-source>
+```
+
 Check for maximum-prefix, ASN mismatch, authentication mismatch, update-source/TTL issue, ACL/CoPP block, interface errors, BFD failure, provider maintenance, or malformed update.
 
 **Execution guidance**
@@ -59,6 +68,8 @@ If the notification reason is understood and the provider confirms readiness, a 
 ```text
 clear ip bgp 203.0.113.9
 ```
+
+For a VRF peer, use the platform-specific VRF-scoped clear for that exact neighbor instead of the global clear. Do not run a global clear for a VRF-scoped incident.
 
 Avoid broad clears such as `clear ip bgp *`.
 
@@ -70,6 +81,8 @@ show ip bgp neighbors 203.0.113.9
 show ip route bgp
 show logging | include 203.0.113.9|BGP
 ```
+
+Use the same VRF-scoped equivalents in post-checks when the peer belongs to a VRF.
 
 Success means the neighbor reaches `Established`, expected prefixes return, route counts are within expected bounds, and no new notification appears.
 
