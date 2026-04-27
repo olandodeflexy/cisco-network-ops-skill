@@ -24,7 +24,7 @@ Secondary context:
 
 ### Codex
 
-Add this repository as a Codex plugin marketplace:
+Add this repository as a Codex marketplace source:
 
 ```bash
 codex plugin marketplace add olandodeflexy/cisco-network-ops-skill
@@ -39,7 +39,7 @@ ln -s "$(pwd)/skills/cisco-network-ops" ~/.codex/skills/cisco-network-ops
 
 ### Claude Code
 
-Add this repository as a Claude Code marketplace, then install the plugin:
+Add this repository as a Claude Code marketplace source, then install the plugin:
 
 ```bash
 claude plugin marketplace add olandodeflexy/cisco-network-ops-skill
