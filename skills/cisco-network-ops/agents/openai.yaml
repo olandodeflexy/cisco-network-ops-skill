@@ -1,0 +1,5 @@
+interface:
+  display_name: "Cisco Network Operations"
+  short_description: "Cisco network change and incident guidance"
+  default_prompt: "Use $cisco-network-ops to review this Cisco change for risk, validation, and rollback."
+  brand_color: "#1BA0D7"

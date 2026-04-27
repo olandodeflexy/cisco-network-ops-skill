@@ -1,0 +1,32 @@
+{
+  "name": "cisco-network-ops-skill",
+  "owner": {
+    "name": "Cisco Network Operations Skill contributors"
+  },
+  "metadata": {
+    "description": "Use when reviewing, troubleshooting, or planning Cisco network operations work across IOS XE, NX-OS, IOS XR, and adjacent Cisco platforms; diagnoses change safety, platform mismatch, routing, switching, HA, policy, observability, and automation risks.",
+    "version": "0.1.0",
+    "license": "Apache-2.0"
+  },
+  "plugins": [
+    {
+      "name": "cisco-network-ops-skill",
+      "description": "Diagnose-first Cisco network operations guidance for change safety, troubleshooting, and automation review.",
+      "source": "./",
+      "category": "development",
+      "keywords": [
+        "cisco",
+        "network-operations",
+        "noc",
+        "ios-xe",
+        "nx-os",
+        "ios-xr",
+        "routing",
+        "switching",
+        "netops",
+        "automation"
+      ],
+      "version": "0.1.0"
+    }
+  ]
+}

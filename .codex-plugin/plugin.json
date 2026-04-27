@@ -1,0 +1,40 @@
+{
+  "name": "cisco-network-ops-skill",
+  "version": "0.1.0",
+  "description": "Diagnose-first Cisco network operations guidance for change safety, troubleshooting, and automation review.",
+  "author": {
+    "name": "Cisco Network Operations Skill contributors"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "cisco",
+    "network-operations",
+    "noc",
+    "ios-xe",
+    "nx-os",
+    "ios-xr",
+    "routing",
+    "switching",
+    "netops",
+    "automation"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Cisco Network Operations",
+    "shortDescription": "Cisco change, incident, and automation guidance",
+    "longDescription": "Diagnose-first guidance for Cisco network operations work across IOS XE, NX-OS, IOS XR, and adjacent Cisco platforms. Reviews changes, troubleshooting artifacts, and automation for evidence, risk, validation, and rollback.",
+    "developerName": "Cisco Network Operations Skill contributors",
+    "category": "Development",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Review this Cisco change for risk and rollback.",
+      "Troubleshoot this Cisco show output.",
+      "Review this NetOps automation for safe rollout."
+    ],
+    "brandColor": "#1BA0D7"
+  }
+}
+

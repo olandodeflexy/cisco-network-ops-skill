@@ -1,0 +1,22 @@
+{
+  "name": "cisco-network-ops-skill",
+  "version": "0.1.0",
+  "description": "Diagnose-first Cisco network operations guidance for change safety, troubleshooting, and automation review.",
+  "author": {
+    "name": "Cisco Network Operations Skill contributors"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "cisco",
+    "network-operations",
+    "noc",
+    "ios-xe",
+    "nx-os",
+    "ios-xr",
+    "routing",
+    "switching",
+    "netops",
+    "automation"
+  ]
+}
+
