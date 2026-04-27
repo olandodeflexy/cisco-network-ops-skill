@@ -9,7 +9,7 @@
 | Nornir | broad inventory blast radius | filter inventory explicitly and batch changes |
 | pyATS/Genie | parser assumptions | preserve raw output and parser version |
 | NETCONF/RESTCONF | model/version mismatch | validate YANG path, candidate/confirmed commit if supported |
-| NX-API | endpoint/payload mismatch, CLI-over-API ambiguity | confirm NX-OS version, transport mode, payload type, and rollback path |
+| NX-OS NX-API | endpoint/payload mismatch, CLI-over-API ambiguity | confirm NX-OS version, transport mode, payload type, and rollback path |
 | Controller API | hidden deployment blast radius | inspect preview/diff and controller job target set |
 
 ## Idempotency Rules
