@@ -87,6 +87,12 @@ def parse_simple_yaml_mapping(content: str, source: str) -> dict[str, Any]:
         while indent <= stack[-1][0]:
             stack.pop()
         parent = stack[-1][1]
+        expected_indent = 0 if stack[-1][0] == -1 else stack[-1][0] + 2
+        if indent != expected_indent:
+            fail(
+                f"{source}:{line_number} jumps from indent "
+                f"{stack[-1][0]} to {indent}; use two-space YAML nesting"
+            )
 
         if not value.strip():
             child: dict[str, Any] = {}
