@@ -9,6 +9,7 @@
 | Nornir | broad inventory blast radius | filter inventory explicitly and batch changes |
 | pyATS/Genie | parser assumptions | preserve raw output and parser version |
 | NETCONF/RESTCONF | model/version mismatch | validate YANG path, candidate/confirmed commit if supported |
+| NX-OS NX-API | endpoint/payload mismatch, CLI-over-API ambiguity | confirm NX-OS version, transport mode, payload type, and rollback path |
 | Controller API | hidden deployment blast radius | inspect preview/diff and controller job target set |
 
 ## Idempotency Rules
@@ -34,3 +35,4 @@ Prefer model-driven interfaces for structured state when platform support is pro
 
 Do not invent endpoint paths, YANG models, or controller API fields. Ask for docs, schema, or captured responses when exact API shape matters.
 
+For NX-OS NX-API, distinguish CLI passthrough, JSON-RPC, and REST-style calls before reviewing automation. Require captured request/response samples, NX-OS version, feature enablement state, auth path, and whether the operation is read-only or state-changing.
