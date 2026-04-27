@@ -4,4 +4,7 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 *.pyc
-
+.venv/
+venv/
+.vscode/
+.idea/
