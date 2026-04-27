@@ -27,7 +27,9 @@ Collect platform-appropriate equivalents for:
 | --- | --- |
 | OSPF | neighbor state, area, network type, MTU, authentication, passive interface |
 | EIGRP | neighbor state, K-values, stub, authentication, topology entry |
-| IS-IS | adjacency state, level, NET/system ID, MTU, circuit type |
+| IS-IS | adjacency state, level-1/level-2 role, NET/system ID, MTU, circuit type, LSP/database evidence |
+
+For IS-IS, collect platform-appropriate equivalents for neighbor/CLNS adjacency state, level-1 vs level-2 participation, interface circuit type, area/NET, LSP database health, overload bit, metric changes, authentication, and MTU. On IOS XR, also capture commit history or candidate diff if the symptom follows a routing-policy or interface change.
 
 ## Change Safety Rules
 
@@ -35,4 +37,3 @@ Collect platform-appropriate equivalents for:
 - Confirm VRF/address-family before interpreting any route output.
 - Compare pre/post routes for specific prefixes and aggregate counts.
 - Avoid clearing routing sessions as a first step; it is state-changing and can hide root cause.
-
