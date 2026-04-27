@@ -87,11 +87,15 @@ def parse_simple_yaml_mapping(content: str, source: str) -> dict[str, Any]:
         while indent <= stack[-1][0]:
             stack.pop()
         parent = stack[-1][1]
-        expected_indent = 0 if stack[-1][0] == -1 else stack[-1][0] + 2
+        parent_indent = stack[-1][0]
+        expected_indent = 0 if parent_indent == -1 else parent_indent + 2
         if indent != expected_indent:
+            context = (
+                "at top level" if parent_indent == -1 else f"under parent indent {parent_indent}"
+            )
             fail(
-                f"{source}:{line_number} jumps from indent "
-                f"{stack[-1][0]} to {indent}; use two-space YAML nesting"
+                f"{source}:{line_number} has indent {indent}; expected "
+                f"{expected_indent} {context}; use two-space YAML nesting"
             )
 
         if not value.strip():
@@ -137,7 +141,10 @@ def check_skill_md() -> dict[str, Any]:
     frontmatter = parse_frontmatter(content)
     if frontmatter.get("name") != "cisco-network-ops":
         fail("SKILL.md frontmatter name must be cisco-network-ops")
-    if not frontmatter.get("description", "").startswith("Use when"):
+    description = frontmatter.get("description")
+    if not isinstance(description, str) or not description:
+        fail("SKILL.md description must be a non-empty string")
+    if not description.startswith("Use when"):
         fail("SKILL.md description must start with 'Use when'")
     if frontmatter.get("license") != "Apache-2.0":
         fail("SKILL.md license must be Apache-2.0")
