@@ -22,9 +22,41 @@ Secondary context:
 
 ## Install
 
-For local Codex development, point Codex at this repo as a plugin or copy/symlink `skills/cisco-network-ops` into a Codex-discoverable skills directory.
+### Codex
 
-For local Claude Code development, install this repo as a plugin or copy/symlink `skills/cisco-network-ops` into a Claude-discoverable skills directory.
+Add this repository as a Codex marketplace source:
+
+```bash
+codex plugin marketplace add olandodeflexy/cisco-network-ops-skill
+```
+
+For local development from a checkout, symlink the skill directly:
+
+```bash
+mkdir -p ~/.codex/skills
+ln -s "$(pwd)/skills/cisco-network-ops" ~/.codex/skills/cisco-network-ops
+```
+
+### Claude Code
+
+Add this repository as a Claude Code marketplace source, then install the plugin:
+
+```bash
+claude plugin marketplace add olandodeflexy/cisco-network-ops-skill
+claude plugin install cisco-network-ops-skill@cisco-network-ops-skill
+```
+
+For one-off local testing from a checkout:
+
+```bash
+claude -p --plugin-dir "$(pwd)" 'Use $cisco-network-ops to review this Cisco change for risk and rollback.'
+```
+
+## Metadata Notes
+
+The Codex manifest includes `skills` and rich `interface` metadata because Codex reads those fields for plugin discovery and UI presentation.
+
+The Claude plugin manifest stays minimal because Claude Code discovers skills from the plugin `skills/` directory convention and validates the current manifest without a Codex-style `interface` block.
 
 ## Try It
 
@@ -49,4 +81,3 @@ python3 scripts/validate_skill.py
 ```
 
 Smoke prompts live in `tests/smoke-test-prompts.md`.
-
