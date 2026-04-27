@@ -1,6 +1,6 @@
 ---
 name: cisco-network-ops
-description: Use when reviewing, troubleshooting, or planning Cisco network operations work across IOS XE, NX-OS, IOS XR, and adjacent Cisco platforms; diagnoses change safety, platform mismatch, routing, switching, HA, policy, observability, and automation risks with NOC-ready evidence, validation, and rollback.
+description: Use when reviewing Cisco network changes, incidents, configs, logs, or automation for risk, evidence, validation, and rollback.
 license: Apache-2.0
 metadata:
   author: Cisco Network Operations Skill contributors
@@ -40,7 +40,7 @@ Small factual answers may compress the contract. Production-impacting advice mus
 5. Prefer read-only diagnostics before any configuration.
 6. For state-changing work, produce pre-checks, execution steps, post-checks, rollback, and abort criteria.
 7. Validate with lab, parser, pyATS/Genie, Batfish, lint, or staged post-checks where applicable.
-8. Emit the Response Contract.
+8. Emit the Response Contract. For an end-to-end pattern, see [Example Response](references/example-response.md).
 
 ## Diagnose Before You Generate
 
@@ -52,7 +52,7 @@ Small factual answers may compress the contract. Production-impacting advice mus
 | **Routing convergence risk** | BGP/OSPF/EIGRP/IS-IS adjacency changes, route loss, redistribution, policy edits | [Routing Troubleshooting](references/routing-troubleshooting.md), [Change Safety](references/change-safety.md) |
 | **Layer 2 risk** | STP, VLAN, trunk, port-channel, vPC, loop, blackhole, MAC move symptoms | [Switching Troubleshooting](references/switching-troubleshooting.md), [Change Safety](references/change-safety.md) |
 | **HA / redundancy risk** | HSRP/VRRP/GLBP, vPC, VSS, StackWise, dual supervisor/RP state, asymmetric failover | [Switching Troubleshooting](references/switching-troubleshooting.md), [Platform Matrix](references/platform-matrix.md) |
-| **ACL/NAT/policy shadowing** | Rule order errors, broad permits/denies, NAT precedence, object-group mistakes | [Security Policy](references/security-policy.md) |
+| **ACL/NAT/policy shadowing** | Rule order errors, broad permits/denies, NAT precedence, object-group mistakes | [Security Policy](references/security-policy.md), [ASA/FTD Operations](references/asa-ftd.md) |
 | **Secret exposure** | Passwords, SNMP communities, keys, tokens, configs or logs exposing credentials | [Security Policy](references/security-policy.md), [Automation and APIs](references/automation-and-apis.md) |
 | **Observability gaps** | Missing before/after evidence, weak telemetry, no alert correlation, unclear success signal | [Telemetry and Observability](references/telemetry-observability.md), [Quick Reference](references/quick-reference.md) |
 | **Validation blind spots** | No lab, parser, dry-run, pyATS, Batfish, lint, or staged verification | [Testing and Validation](references/testing-and-validation.md) |
@@ -78,7 +78,7 @@ Also activate for automation touching Cisco devices through Ansible, Nornir, Net
 | IOS XE | Primary: change review, troubleshooting, command guidance, automation review |
 | NX-OS | Primary: change review, troubleshooting, command guidance, automation review |
 | IOS XR | Primary: change review, troubleshooting, command guidance, automation review |
-| ASA/FTD | Secondary: ACL/NAT/policy/routing triage; limited config generation |
+| ASA/FTD | Secondary: ACL/NAT/policy/routing triage; no full firewall design or deployment modeling |
 | ACI, Catalyst Center, Meraki, SD-WAN | Secondary: operational context and escalation guidance only |
 
 When platform or version is missing, say so and avoid platform-specific commands that may be wrong.
