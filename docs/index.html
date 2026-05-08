@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cisco Network Operations Skill is diagnose-first AI-agent guidance for Cisco network changes, incidents, configs, logs, and automation reviews.">
+    <title>Cisco Network Operations Skill</title>
+    <link rel="icon" href="./assets/cisco-network-ops-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <a class="wordmark" href="https://github.com/olandodeflexy/cisco-network-ops-skill" aria-label="Cisco Network Operations Skill on GitHub">
+            <img src="./assets/cisco-network-ops-mark.svg" alt="">
+            <span>CISCO NETWORK OPS SKILL</span>
+          </a>
+          <h1 id="hero-title">Cisco Network Operations Skill</h1>
+          <p class="tagline">Diagnose Cisco changes before they touch production.</p>
+          <p class="lead">An AI-agent skill for reviewing Cisco configs, diffs, logs, incidents, and automation with evidence, risk controls, validation, rollback, and escalation notes.</p>
+          <ul class="pills" aria-label="Key properties">
+            <li>Offline first</li>
+            <li>Human approved</li>
+            <li>Codex + Claude Code</li>
+          </ul>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/olandodeflexy/cisco-network-ops-skill">View on GitHub</a>
+            <a class="button secondary" href="#install">Install</a>
+          </div>
+          <p class="disclaimer">Independent open source project. Not affiliated with, endorsed by, or sponsored by Cisco.</p>
+        </div>
+      </section>
+
+      <section class="install" id="install" aria-labelledby="install-title">
+        <div class="section-inner">
+          <p class="eyebrow">install</p>
+          <h2 id="install-title">Add it to your AI coding agent.</h2>
+          <div class="install-grid">
+            <article class="install-card">
+              <h3>Codex</h3>
+              <div class="terminal" data-copy-source data-command="codex plugin marketplace add olandodeflexy/cisco-network-ops-skill">
+                <code>codex plugin marketplace add olandodeflexy/cisco-network-ops-skill</code>
+                <button type="button" data-copy>Copy</button>
+              </div>
+            </article>
+            <article class="install-card">
+              <h3>Claude Code</h3>
+              <div class="terminal" data-copy-source data-command="claude plugin marketplace add olandodeflexy/cisco-network-ops-skill&#10;claude plugin install cisco-network-ops-skill@cisco-network-ops-skill">
+                <code>claude plugin marketplace add olandodeflexy/cisco-network-ops-skill
+claude plugin install cisco-network-ops-skill@cisco-network-ops-skill</code>
+                <button type="button" data-copy>Copy</button>
+              </div>
+            </article>
+          </div>
+          <p class="note">The skill works from artifacts you provide. It does not connect directly to routers, switches, firewalls, or controllers.</p>
+        </div>
+      </section>
+
+      <section class="preview" aria-labelledby="preview-title">
+        <div class="section-inner split">
+          <div>
+            <p class="eyebrow">workflow</p>
+            <h2 id="preview-title">Every recommendation must show its evidence.</h2>
+            <p>The skill routes requests through platform, blast-radius, routing, switching, security policy, observability, and automation failure modes before recommending a next step.</p>
+          </div>
+          <img class="workflow-image" src="./assets/workflow-preview.svg" alt="Cisco Network Operations Skill response workflow preview">
+        </div>
+      </section>
+
+      <section class="steps" aria-label="How it works">
+        <div class="section-inner steps-grid">
+          <article>
+            <span>01</span>
+            <h3>Diagnose</h3>
+            <p>Identify the platform, topology role, risk category, missing context, and the exact artifact that supports the current hypothesis.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Constrain</h3>
+            <p>Keep production changes gated by read-only checks, maintenance context, blast-radius limits, abort criteria, and human approval.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Validate</h3>
+            <p>Return pre-checks, post-checks, parser or lab options, rollback steps, and escalation data that operators can verify.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="compare" aria-labelledby="compare-title">
+        <div class="section-inner">
+          <p class="eyebrow">comparison</p>
+          <h2 id="compare-title">Built for network operations, not generic config help.</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Capability</th>
+                  <th>Cisco Network Ops Skill</th>
+                  <th>Generic prompt</th>
+                  <th>Static runbook</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Platform awareness</td>
+                  <td class="yes">IOS XE, NX-OS, IOS XR</td>
+                  <td>Inconsistent</td>
+                  <td>Manual lookup</td>
+                </tr>
+                <tr>
+                  <td>Risk contract</td>
+                  <td class="yes">Required</td>
+                  <td>Optional</td>
+                  <td>Usually partial</td>
+                </tr>
+                <tr>
+                  <td>Evidence handling</td>
+                  <td class="yes">Explicit</td>
+                  <td>Ad hoc</td>
+                  <td>Operator dependent</td>
+                </tr>
+                <tr>
+                  <td>Rollback guidance</td>
+                  <td class="yes">Required for changes</td>
+                  <td>Often missing</td>
+                  <td>Document dependent</td>
+                </tr>
+                <tr>
+                  <td>Agent packaging</td>
+                  <td class="yes">Codex + Claude Code</td>
+                  <td>No</td>
+                  <td>No</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>Works with Codex / Claude Code / Cisco operational artifacts</span>
+        <nav aria-label="Footer">
+          <a href="https://github.com/olandodeflexy/cisco-network-ops-skill">GitHub</a>
+          <a href="https://github.com/olandodeflexy/cisco-network-ops-skill/releases">Releases</a>
+          <a href="#install">Install</a>
+        </nav>
+        <span>Apache-2.0 / not affiliated with Cisco</span>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll("[data-copy-source]").forEach((block) => {
+        const copyButton = block.querySelector("[data-copy]");
+        copyButton?.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(block.dataset.command);
+            copyButton.textContent = "Copied";
+          } catch {
+            copyButton.textContent = "Copy failed";
+          }
+          setTimeout(() => {
+            copyButton.textContent = "Copy";
+          }, 1600);
+        });
+      });
+    </script>
+  </body>
+</html>

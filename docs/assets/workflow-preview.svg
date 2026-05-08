@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Cisco Network Operations Skill workflow preview</title>
+  <desc id="desc">A product-style preview showing a Cisco network change review moving from evidence to safety controls and validation.</desc>
+  <rect width="1200" height="720" rx="24" fill="#101415"/>
+  <rect x="34" y="34" width="1132" height="652" rx="18" fill="#F4F1E9"/>
+  <rect x="72" y="76" width="1056" height="74" rx="12" fill="#FFFFFF" stroke="#D7D1C5"/>
+  <circle cx="108" cy="113" r="10" fill="#B91C1C"/>
+  <circle cx="140" cy="113" r="10" fill="#B7791F"/>
+  <circle cx="172" cy="113" r="10" fill="#087F8C"/>
+  <text x="212" y="120" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21" fill="#293033">Use $cisco-network-ops to review this IOS XE trunk change</text>
+  <rect x="72" y="186" width="326" height="426" rx="16" fill="#FFFFFF" stroke="#D7D1C5"/>
+  <text x="106" y="234" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#141819">Evidence</text>
+  <rect x="106" y="266" width="240" height="42" rx="8" fill="#E6F7F9"/>
+  <text x="126" y="294" font-family="Inter, Arial, sans-serif" font-size="17" fill="#0F5960">trunk VLAN diff</text>
+  <rect x="106" y="328" width="220" height="42" rx="8" fill="#FEF3D9"/>
+  <text x="126" y="356" font-family="Inter, Arial, sans-serif" font-size="17" fill="#7C4A12">port-channel path</text>
+  <rect x="106" y="390" width="250" height="42" rx="8" fill="#FDECEC"/>
+  <text x="126" y="418" font-family="Inter, Arial, sans-serif" font-size="17" fill="#8F1D1D">rollback missing</text>
+  <path d="M106 478h238M106 522h176M106 566h214" stroke="#B8B0A4" stroke-width="15" stroke-linecap="round"/>
+  <rect x="438" y="186" width="326" height="426" rx="16" fill="#141819"/>
+  <text x="472" y="234" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">Safety contract</text>
+  <path d="M478 292h220M478 340h184M478 388h244M478 436h158" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" opacity=".84"/>
+  <rect x="472" y="494" width="118" height="42" rx="8" fill="#087F8C"/>
+  <text x="492" y="522" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">pre-checks</text>
+  <rect x="608" y="494" width="112" height="42" rx="8" fill="#2D3537" stroke="#4F5B5E"/>
+  <text x="629" y="522" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">abort</text>
+  <rect x="804" y="186" width="324" height="426" rx="16" fill="#FFFFFF" stroke="#D7D1C5"/>
+  <text x="838" y="234" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#141819">Validate</text>
+  <path d="m850 294 28 28 58-68" fill="none" stroke="#087F8C" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="954" y="302" font-family="Inter, Arial, sans-serif" font-size="18" fill="#293033">show interface trunk</text>
+  <path d="m850 382 28 28 58-68" fill="none" stroke="#087F8C" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="954" y="390" font-family="Inter, Arial, sans-serif" font-size="18" fill="#293033">neighbor state</text>
+  <path d="m850 470 28 28 58-68" fill="none" stroke="#087F8C" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="954" y="478" font-family="Inter, Arial, sans-serif" font-size="18" fill="#293033">rollback path</text>
+</svg>

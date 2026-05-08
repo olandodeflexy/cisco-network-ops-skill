@@ -67,6 +67,12 @@ Use prompts such as:
 - "Use $cisco-network-ops to review this Netmiko script before production rollout."
 - "Use $cisco-network-ops to summarize this NOC incident from logs and show commands."
 
+## Website
+
+Project website source lives in [docs/](docs/) and is published with GitHub Pages:
+
+https://olandodeflexy.github.io/cisco-network-ops-skill/
+
 ## Safety Model
 
 - No autonomous production remediation.
