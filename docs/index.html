@@ -18,6 +18,7 @@
           </a>
           <div class="nav-links">
             <a href="#install">Install</a>
+            <a href="#use">Use</a>
             <a href="#contract">Contract</a>
             <a href="https://github.com/olandodeflexy/cisco-network-ops-skill">GitHub</a>
           </div>
@@ -116,6 +117,43 @@
             <pre id="claude-command">claude plugin marketplace add olandodeflexy/cisco-network-ops-skill
 claude plugin install cisco-network-ops-skill@cisco-network-ops-skill</pre>
           </article>
+        </div>
+      </section>
+
+      <section class="usage" id="use" aria-labelledby="use-title">
+        <div class="section-heading">
+          <p class="kicker">Use</p>
+          <h2 id="use-title">Ask it to review real artifacts, then keep the operator in control.</h2>
+        </div>
+        <div class="use-grid">
+          <article>
+            <div class="use-heading">
+              <h3>Codex</h3>
+              <button type="button" data-copy-target="codex-use-prompt">Copy prompt</button>
+            </div>
+            <ol>
+              <li>Open the repo, ticket folder, or change-review workspace that contains the Cisco artifacts.</li>
+              <li>Paste or reference configs, diffs, show output, logs, topology notes, or automation code.</li>
+              <li>Ask Codex to use the skill and require evidence, validation, and rollback.</li>
+            </ol>
+            <pre id="codex-use-prompt">Use $cisco-network-ops to review this IOS XE trunk change for risk, evidence, pre-checks, post-checks, rollback, and abort criteria.</pre>
+          </article>
+          <article>
+            <div class="use-heading">
+              <h3>Claude Code</h3>
+              <button type="button" data-copy-target="claude-use-prompt">Copy prompt</button>
+            </div>
+            <ol>
+              <li>Install the plugin, then start Claude Code in the project or incident workspace.</li>
+              <li>Provide the relevant artifacts directly in chat or as local files for review.</li>
+              <li>Ask for the response contract when the request could affect production.</li>
+            </ol>
+            <pre id="claude-use-prompt">Use $cisco-network-ops to troubleshoot this BGP neighbor-down output. Separate evidence from inference and list the next read-only commands.</pre>
+          </article>
+        </div>
+        <div class="use-note">
+          <strong>Good inputs:</strong>
+          <span>config snippets, diffs, show commands, logs, NMS alerts, topology notes, change tickets, Netmiko/Nornir/Ansible code, pyATS output, and controller API payloads.</span>
         </div>
       </section>
 
