@@ -25,6 +25,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--paper);
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -50,7 +51,6 @@ p {
 }
 
 .command-center {
-  position: relative;
   min-height: 84vh;
   overflow: hidden;
   padding: 24px 22px 72px;
@@ -99,144 +99,100 @@ footer a:hover {
   color: var(--blue);
 }
 
-.scene {
-  position: absolute;
-  inset: 86px max(22px, calc((100vw - 1180px) / 2)) 34px;
-  z-index: 1;
+.hero-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1.14fr);
+  gap: 44px;
+  align-items: center;
+  width: min(1180px, 100%);
+  margin: 76px auto 0;
 }
 
-.scene-panel {
-  position: absolute;
-  border: 1px solid rgba(16, 24, 24, 0.14);
+.ops-console {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(16, 24, 24, 0.18);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.86);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(12px);
 }
 
-.panel-label {
-  color: var(--muted);
-  font-size: 11px;
+.console-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  background: #101818;
+  color: #f8faf5;
+  font-size: 12px;
   font-weight: 900;
-  letter-spacing: 0;
   text-transform: uppercase;
 }
 
-.topology {
-  right: 0;
-  top: 0;
-  width: min(50vw, 640px);
-  min-height: 410px;
-  padding: 22px;
+.status {
+  color: #8fd6c0;
 }
 
-.topology svg {
-  width: 100%;
-  height: 330px;
-  margin-top: 8px;
-}
-
-.topology path {
-  fill: none;
-  stroke: #6d7a76;
-  stroke-width: 7;
-  stroke-linecap: round;
-}
-
-.topology circle {
-  fill: #f8faf5;
-  stroke: var(--night);
-  stroke-width: 8;
-}
-
-.topology circle:nth-of-type(2) {
-  fill: var(--mint);
-}
-
-.topology circle:nth-of-type(5) {
-  fill: var(--gold);
-}
-
-.topology text {
-  fill: var(--night);
-  font-size: 21px;
-  font-weight: 900;
-  text-anchor: middle;
-}
-
-.incident {
-  right: 450px;
-  bottom: 24px;
-  width: 280px;
-  padding: 18px;
+.console-body {
   display: grid;
-  gap: 10px;
-}
-
-.incident span {
-  display: block;
-  border-left: 4px solid var(--mint);
-  padding: 9px 11px;
-  background: #f8faf5;
-  color: #26312e;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 13px;
-}
-
-.risk {
-  right: 52px;
-  bottom: 34px;
-  width: 360px;
+  gap: 14px;
   padding: 20px;
-  background: #181f1e;
-  color: #f4f7f2;
 }
 
-.risk .panel-label {
-  color: #aebbb6;
+.console-line {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
 }
 
-.risk strong {
-  display: block;
-  margin: 12px 0 8px;
-  font-size: 21px;
-  line-height: 1.1;
+.console-line span {
+  color: var(--rust);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.risk p {
+.console-line p,
+.console-callout p {
   margin: 0;
+  color: #34403c;
+}
+
+.console-callout {
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--night);
+  color: #f8faf5;
+}
+
+.console-callout strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 21px;
+}
+
+.console-callout p {
   color: #cbd6d1;
 }
 
-.output {
-  left: 0;
-  bottom: 22px;
-  width: 260px;
-  padding: 18px;
-}
-
-.output ol {
-  margin: 12px 0 0;
-  padding-left: 22px;
-  color: #2d3835;
-  font-weight: 760;
-}
-
 .hero-copy {
-  position: relative;
-  z-index: 3;
-  width: min(1180px, 100%);
-  margin: 96px auto 0;
+  min-width: 0;
   max-width: 650px;
 }
 
 .kicker {
+  max-width: 100%;
   margin-bottom: 14px;
   color: var(--rust);
   font-size: 12px;
   font-weight: 950;
   letter-spacing: 0;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -245,6 +201,7 @@ h1 {
   font-size: 74px;
   line-height: 0.95;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 .hero-text {
@@ -252,6 +209,7 @@ h1 {
   margin-bottom: 28px;
   color: #34403c;
   font-size: 22px;
+  overflow-wrap: anywhere;
 }
 
 .hero-actions {
@@ -516,33 +474,13 @@ footer a {
     padding-bottom: 62px;
   }
 
-  .scene {
-    position: relative;
-    inset: auto;
-    display: grid;
-    gap: 14px;
-    width: min(1180px, 100%);
-    margin: 42px auto 0;
-  }
-
-  .scene-panel {
-    position: relative;
-    inset: auto;
-    width: auto;
-  }
-
-  .topology {
-    min-height: auto;
-  }
-
-  .incident,
-  .risk,
-  .output {
-    width: auto;
+  .hero-stage {
+    grid-template-columns: 1fr;
+    margin-top: 66px;
   }
 
   .hero-copy {
-    margin-top: 66px;
+    max-width: 760px;
   }
 
   h1 {
@@ -564,6 +502,11 @@ footer a {
 }
 
 @media (max-width: 620px) {
+  .command-center {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
   .topbar,
   .nav-links,
   .hero-actions {
@@ -573,6 +516,28 @@ footer a {
 
   .nav-links {
     gap: 10px;
+  }
+
+  .hero-stage,
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-stage {
+    margin-top: 52px;
+  }
+
+  .ops-console {
+    display: none;
+  }
+
+  .kicker,
+  h1,
+  .hero-text {
+    width: 100%;
+    max-width: 100%;
   }
 
   h1 {
@@ -587,8 +552,13 @@ footer a {
     font-size: 18px;
   }
 
-  .topology svg {
-    height: auto;
+  .console-bar,
+  .console-line {
+    grid-template-columns: 1fr;
+  }
+
+  .console-line {
+    gap: 6px;
   }
 
   .primary-platforms li {

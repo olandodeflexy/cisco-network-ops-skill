@@ -23,55 +23,40 @@
           </div>
         </nav>
 
-        <div class="hero-copy">
-          <p class="kicker">Open source skill for AI network operations review</p>
-          <h1 id="hero-title">Cisco Network Operations Skill</h1>
-          <p class="hero-text">Give Codex or Claude Code a Cisco-aware review layer for incidents, configs, diffs, logs, and automation. It works from artifacts you provide, separates evidence from inference, and keeps production changes behind human approval.</p>
-          <div class="hero-actions">
-            <a class="primary-action" href="#install">Install the skill</a>
-            <a class="secondary-action" href="https://github.com/olandodeflexy/cisco-network-ops-skill">View source</a>
+        <div class="hero-stage">
+          <div class="hero-copy">
+            <p class="kicker">Open source skill for AI network operations review</p>
+            <h1 id="hero-title">Cisco Network Operations Skill</h1>
+            <p class="hero-text">Give Codex or Claude Code a Cisco-aware review layer for incidents, configs, diffs, logs, and automation. It works from artifacts you provide, separates evidence from inference, and keeps production changes behind human approval.</p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#install">Install the skill</a>
+              <a class="secondary-action" href="https://github.com/olandodeflexy/cisco-network-ops-skill">View source</a>
+            </div>
           </div>
-        </div>
 
-        <div class="scene" aria-hidden="true">
-          <div class="scene-panel topology">
-            <div class="panel-label">Topology scope</div>
-            <svg viewBox="0 0 560 320" role="presentation">
-              <path d="M102 98H280M280 98h178M280 98v112M170 210h110M280 210h110" />
-              <circle cx="102" cy="98" r="30" />
-              <circle cx="280" cy="98" r="34" />
-              <circle cx="458" cy="98" r="30" />
-              <circle cx="170" cy="210" r="26" />
-              <circle cx="280" cy="210" r="30" />
-              <circle cx="390" cy="210" r="26" />
-              <text x="77" y="104">WAN</text>
-              <text x="252" y="104">CORE</text>
-              <text x="430" y="104">DC</text>
-              <text x="142" y="216">ACC</text>
-              <text x="252" y="216">FW</text>
-              <text x="364" y="216">EDGE</text>
-            </svg>
-          </div>
-          <div class="scene-panel incident">
-            <div class="panel-label">Evidence queue</div>
-            <span>show bgp summary</span>
-            <span>interface diff</span>
-            <span>netmiko review</span>
-            <span>packet-tracer note</span>
-          </div>
-          <div class="scene-panel risk">
-            <div class="panel-label">Change gate</div>
-            <strong>State-changing action blocked</strong>
-            <p>Needs maintenance context, pre-checks, post-checks, rollback, and abort criteria.</p>
-          </div>
-          <div class="scene-panel output">
-            <div class="panel-label">Response shape</div>
-            <ol>
-              <li>Assumptions</li>
-              <li>Risk category</li>
-              <li>Evidence</li>
-              <li>Rollback</li>
-            </ol>
+          <div class="ops-console" aria-label="Example skill response preview">
+            <div class="console-bar">
+              <span>artifact review</span>
+              <span class="status">advisory only</span>
+            </div>
+            <div class="console-body">
+              <div class="console-line">
+                <span>input</span>
+                <p>IOS XE trunk change, BGP neighbor alert, Netmiko script</p>
+              </div>
+              <div class="console-line">
+                <span>classified risk</span>
+                <p>Layer 2 blast radius, routing convergence, automation safety</p>
+              </div>
+              <div class="console-line">
+                <span>evidence</span>
+                <p>Diff, show command output, ticket notes, script behavior</p>
+              </div>
+              <div class="console-callout">
+                <strong>State-changing action blocked</strong>
+                <p>Needs maintenance context, pre-checks, post-checks, rollback, and abort criteria.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
