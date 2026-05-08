@@ -368,6 +368,87 @@ pre {
   white-space: pre;
 }
 
+.usage {
+  background: var(--paper);
+}
+
+.use-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.use-grid article {
+  display: grid;
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--panel);
+}
+
+.use-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.use-heading h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.use-heading button {
+  border: 0;
+  border-radius: 7px;
+  padding: 9px 12px;
+  background: var(--night);
+  color: #ffffff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.use-grid ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+.use-grid li::marker {
+  color: var(--rust);
+  font-weight: 900;
+}
+
+.use-grid pre {
+  border-radius: 8px;
+  background: #101818;
+  white-space: pre-wrap;
+}
+
+.use-note {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+  background: #ffffff;
+}
+
+.use-note strong {
+  color: var(--rust);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.use-note span {
+  color: var(--muted);
+}
+
 .platforms {
   background: var(--paper);
 }
@@ -496,6 +577,8 @@ footer a {
   .contract-board,
   .command-rail article,
   .platform-matrix,
+  .use-grid,
+  .use-note,
   .proof-list {
     grid-template-columns: 1fr;
   }
@@ -564,6 +647,8 @@ footer a {
   .contract-board,
   .command-rail,
   .platform-matrix,
+  .use-grid,
+  .use-note,
   .proof-list {
     width: min(100%, 340px);
     max-width: 340px;
@@ -585,6 +670,11 @@ footer a {
 
   .console-line {
     gap: 6px;
+  }
+
+  .use-heading {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .primary-platforms li {
